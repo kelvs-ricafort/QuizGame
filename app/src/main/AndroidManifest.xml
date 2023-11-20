@@ -12,9 +12,13 @@
         android:theme="@style/Theme.QuizGame"
         tools:targetApi="31">
         <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme_Login"
+            android:exported="false" />
+        <activity
             android:name=".SplashScreenActivity"
-            android:theme="@style/AppTheme_Splash"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/AppTheme_Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,8 +27,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>

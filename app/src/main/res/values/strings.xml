@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Quiz Game</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="signin">Sign In</string>
+    <string name="or">OR</string>
+    <string name="account">Don\'t have an account?<font color='#5b39c6'>Sign Up</font> </string>
+    <string name="forgot_password"><u>Forgot Password?</u></string>
+
 </resources>
