@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "729434594445",
+    "project_id": "quiz-game-a5514",
+    "storage_bucket": "quiz-game-a5514.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729434594445:android:c82ff449b4474f8b8fd6c4",
+        "android_client_info": {
+          "package_name": "com.newtechieblog.wordpress.views.quizgame"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA35ay_h4bWSgxp2NkT5Itl2oNfDHJzxl0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

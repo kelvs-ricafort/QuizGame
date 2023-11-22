@@ -6,5 +6,6 @@
     <string name="or">OR</string>
     <string name="account">Don\'t have an account?<font color='#5b39c6'>Sign Up</font> </string>
     <string name="forgot_password"><u>Forgot Password?</u></string>
+    <string name="signup">Sign Up</string>
 
 </resources>
