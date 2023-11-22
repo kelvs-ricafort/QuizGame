@@ -15,14 +15,14 @@
         android:layout_marginBottom="20dp"
         android:contentDescription="@string/app_name"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/editTextEmail"
+        app:layout_constraintBottom_toTopOf="@+id/editTextEmailToSendPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/login_image" />
 
     <EditText
-        android:id="@+id/editTextEmail"
+        android:id="@+id/editTextEmailToSendPassword"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="15dp"

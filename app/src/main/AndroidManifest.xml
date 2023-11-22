@@ -11,10 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizGame">
         <activity
-            android:name=".SignUpActivity"
+            android:name=".ForgotPasswordActivity"
             android:theme="@style/AppTheme_Login"
             android:parentActivityName=".LoginActivity"
             android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/AppTheme_Login" />
         <activity
             android:name=".LoginActivity"
             android:exported="false"
@@ -22,7 +27,7 @@
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true"
-            android:theme="@style/AppTheme_Splash" >
+            android:theme="@style/AppTheme_Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
