@@ -1,5 +1,6 @@
 package com.newtechieblog.wordpress.views.quizgame;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -7,15 +8,25 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
     EditText email, password;
     Button signIn;
+    ProgressBar progressBarLogin;
     SignInButton signInGoogle;
     TextView signUp, forgotPassword;
+
+    FirebaseAuth auth = FirebaseAuth.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +39,18 @@ public class LoginActivity extends AppCompatActivity {
         signInGoogle = findViewById(R.id.btnSignInGoogle);
         signUp = findViewById(R.id.textView_account);
         forgotPassword = findViewById(R.id.textViewForgotPassword);
+        progressBarLogin = findViewById(R.id.progressBarLogin);
+
+        progressBarLogin.setVisibility(View.INVISIBLE);
+
 
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                String userEmail = email.getText().toString();
+                String userPassword = password.getText().toString();
+                loginWithFirebase(userEmail, userPassword);
             }
         });
 
@@ -57,5 +75,37 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void loginWithFirebase(String userEmail, String userPassword) {
+        progressBarLogin.setVisibility(View.VISIBLE);
+        signIn.setClickable(false);
+        auth.signInWithEmailAndPassword(userEmail, userPassword)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                            startActivity(intent);
+                            finish();
+                            progressBarLogin.setVisibility(View.INVISIBLE);
+                            Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(LoginActivity.this, "Login is not successful", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        FirebaseUser user = auth.getCurrentUser();
+        if (user != null) {
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
     }
 }

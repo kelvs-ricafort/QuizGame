@@ -12,7 +12,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="20dp"
         android:contentDescription="@string/app_name"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/editTextEmail"
@@ -27,7 +27,7 @@
         android:layout_height="48dp"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="1dp"
         android:ems="10"
         android:hint="@string/email"
         android:importantForAutofill="no"
@@ -63,6 +63,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 
+    <ProgressBar
+        android:id="@+id/progressBarLogin"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignInGoogle" />
+
     <TextView
         android:id="@+id/textView_or"
         android:layout_width="wrap_content"
@@ -90,27 +101,30 @@
         android:id="@+id/textView_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="83dp"
         android:text="@string/account"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSignInGoogle" />
+        app:layout_constraintTop_toBottomOf="@+id/progressBarLogin" />
 
     <TextView
         android:id="@+id/textViewForgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="133dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="134dp"
+        android:layout_marginBottom="35dp"
         android:text="@string/forgot_password"
         android:textColor="@color/black"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_account" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
