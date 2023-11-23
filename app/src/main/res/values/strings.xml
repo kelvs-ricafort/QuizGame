@@ -9,5 +9,6 @@
     <string name="signup">Sign Up</string>
     <string name="email_hint">Enter your Email</string>
     <string name="continue_btn">Continue</string>
+    <string name="default_web_client_id">https://348772804337-9jvrsupvgavaurua9cnesb0qtu7m37ts.apps.googleusercontent.com/</string>
 
 </resources>

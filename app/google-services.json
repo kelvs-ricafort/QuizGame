@@ -7,12 +7,25 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:729434594445:android:c82ff449b4474f8b8fd6c4",
+        "mobilesdk_app_id": "1:729434594445:android:86cbdda67d0f92348fd6c4",
         "android_client_info": {
           "package_name": "com.newtechieblog.wordpress.views.quizgame"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "729434594445-kg6t7r314t72fksnl34rmqvftkmh96gu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.newtechieblog.wordpress.views.quizgame",
+            "certificate_hash": "ef532878abff3da6b1e6a03b3ffa3bbe9ca53ccc"
+          }
+        },
+        {
+          "client_id": "729434594445-otcbkstgdto0q9gdp44r2ocnt2rudhav.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyA35ay_h4bWSgxp2NkT5Itl2oNfDHJzxl0"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729434594445-otcbkstgdto0q9gdp44r2ocnt2rudhav.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
